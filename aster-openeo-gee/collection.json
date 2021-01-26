@@ -1,0 +1,674 @@
+{
+  "stac_version": "1.0.0-beta.2",
+  "stac_extensions": [
+    "collection-assets"
+  ],
+  "id": "ASTER/AST_L1T_003",
+  "title": "ASTER L1T Radiance",
+  "version": "V003",
+  "gee:type": "image_collection",
+  "description": "The Advanced Spaceborne Thermal Emission and Reflection Radiometer (ASTER)\nis a multispectral imager that was launched on board NASA's Terra spacecraft\nin December, 1999. ASTER can collect data in 14 spectral bands from the\nvisible to the thermal infrared. Each scene covers an area of 60 x 60 km.\nThese scenes, produced by the USGS, contain calibrated at-sensor radiance,\northo-rectified and terrain corrected.\n\nNot all 14 bands were collected in each scene. An asset property named\nORIGINAL_BANDS_PRESENT contains the list of bands that are present in each\nscene.\n\nTo convert from Digital Numbers (DN) to radiance at the sensor, the unit\nconversion coefficients are available in the metadata. See\n[ASTER L1T Product Users' Guide](https://lpdaac.usgs.gov/documents/647/AST__L1T_User_Guide_V3.pdf)\nand [ASTER L1T Product Specification](https://lpdaac.usgs.gov/documents/300/ASTER_L1T_Product_Specification.pdf)\nfor more information.\n\nDocumentation:\n\n* [Algorithm Theoretical Basis Document (ATBD)](https://lpdaac.usgs.gov/documents/72/AST_L1T_ATBD.pdf)\n\n* [User's Guide](https://lpdaac.usgs.gov/documents/647/AST__L1T_User_Guide_V3.pdf)\n\n* [ASTER Level-1T Product Specification](https://lpdaac.usgs.gov/documents/300/ASTER_L1T_Product_Specification.pdf)\n\n* [ASTER L1T Quick Reference Guide](ASTER L1T Quick Reference Guide)](https://lpdaac.usgs.gov/documents/174/AST_L1T_Quick_Reference_Guide.pdf)\n",
+  "license": "proprietary",
+  "links": [
+    {
+      "rel": "parent",
+      "href": "../catalog.json"
+    },
+    {
+      "rel": "root",
+      "href": "../catalog.json "
+    },
+    {
+      "rel": "preview",
+      "href": "https://mw1.google.com/ges/dd/images/ASTER_sample.png"
+    },
+    {
+      "rel": "license",
+      "href": "https://developers.google.com/earth-engine/datasets/catalog/ASTER_AST_L1T_003#terms-of-use"
+    },
+    {
+      "rel": "cite-as",
+      "href": "https://doi.org/10.5067/ASTER/AST_L1T.003"
+    }
+  ],
+  "keywords": [
+    "aster",
+    "eos",
+    "imagery",
+    "nasa",
+    "nir",
+    "radiance",
+    "swir",
+    "terra",
+    "thermal",
+    "tir",
+    "toa",
+    "usgs",
+    "vnir"
+  ],
+  "providers": [
+    {
+      "name": "NASA LP DAAC at the USGS EROS Center",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://doi.org/10.5067/ASTER/AST_L1T.003"
+    },
+    {
+      "name": "Google Earth Engine",
+      "roles": [
+        "host"
+      ],
+      "url": "https://developers.google.com/earth-engine/datasets/catalog/ASTER_AST_L1T_003"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          -90,
+          180,
+          90
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2000-03-04T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "sci:doi": "10.5067/ASTER/AST_L1T.003",
+  "sci:citation": "Please visit [LP DAAC 'Citing Our Data' page](https://lpdaac.usgs.gov/citing_our_data)\nfor information on citing LP DAAC datasets.\n",
+  "summaries": {
+    "B01": {
+      "min": 1,
+      "max": 255,
+      "gee:estimated_range": false
+    },
+    "B02": {
+      "min": 1,
+      "max": 255,
+      "gee:estimated_range": false
+    },
+    "B3N": {
+      "min": 1,
+      "max": 255,
+      "gee:estimated_range": false
+    },
+    "B04": {
+      "min": 1,
+      "max": 255,
+      "gee:estimated_range": false
+    },
+    "B05": {
+      "min": 1,
+      "max": 255,
+      "gee:estimated_range": false
+    },
+    "B06": {
+      "min": 1,
+      "max": 255,
+      "gee:estimated_range": false
+    },
+    "B07": {
+      "min": 1,
+      "max": 255,
+      "gee:estimated_range": false
+    },
+    "B08": {
+      "min": 1,
+      "max": 255,
+      "gee:estimated_range": false
+    },
+    "B09": {
+      "min": 1,
+      "max": 255,
+      "gee:estimated_range": false
+    },
+    "B10": {
+      "min": 1,
+      "max": 4095,
+      "gee:estimated_range": false
+    },
+    "B11": {
+      "min": 1,
+      "max": 4095,
+      "gee:estimated_range": false
+    },
+    "B12": {
+      "min": 1,
+      "max": 4095,
+      "gee:estimated_range": false
+    },
+    "B13": {
+      "min": 1,
+      "max": 4095,
+      "gee:estimated_range": false
+    },
+    "B14": {
+      "min": 1,
+      "max": 4095,
+      "gee:estimated_range": false
+    },
+    "gee:schema": [
+      {
+        "BAD_PIXELS_B01": {
+          "description": "Number of bad pixels",
+          "type": "DOUBLE"
+        },
+        "BAD_PIXELS_B02": {
+          "description": "Number of bad pixels",
+          "type": "DOUBLE"
+        },
+        "BAD_PIXELS_B03": {
+          "description": "Number of bad pixels",
+          "type": "DOUBLE"
+        },
+        "BAD_PIXELS_B04": {
+          "description": "Number of bad pixels",
+          "type": "DOUBLE"
+        },
+        "BAD_PIXELS_B05": {
+          "description": "Number of bad pixels",
+          "type": "DOUBLE"
+        },
+        "BAD_PIXELS_B06": {
+          "description": "Number of bad pixels",
+          "type": "DOUBLE"
+        },
+        "BAD_PIXELS_B07": {
+          "description": "Number of bad pixels",
+          "type": "DOUBLE"
+        },
+        "BAD_PIXELS_B08": {
+          "description": "Number of bad pixels",
+          "type": "DOUBLE"
+        },
+        "BAD_PIXELS_B09": {
+          "description": "Number of bad pixels",
+          "type": "DOUBLE"
+        },
+        "BAD_PIXELS_B10": {
+          "description": "Number of bad pixels",
+          "type": "DOUBLE"
+        },
+        "BAD_PIXELS_B11": {
+          "description": "Number of bad pixels",
+          "type": "DOUBLE"
+        },
+        "BAD_PIXELS_B12": {
+          "description": "Number of bad pixels",
+          "type": "DOUBLE"
+        },
+        "BAD_PIXELS_B13": {
+          "description": "Number of bad pixels",
+          "type": "DOUBLE"
+        },
+        "BAD_PIXELS_B14": {
+          "description": "Number of bad pixels",
+          "type": "DOUBLE"
+        },
+        "CLOUDCOVER": {
+          "description": "Cloud coverage",
+          "type": "DOUBLE"
+        },
+        "COARSE_DEM_DATE": {
+          "description": "Coarse DEM issuance date",
+          "type": "STRING"
+        },
+        "COARSE_DEM_NOTE": {
+          "description": "Coarse DEM comments",
+          "type": "STRING"
+        },
+        "COARSE_DEM_VERSION": {
+          "description": "Coarse DEM version number",
+          "type": "STRING"
+        },
+        "FLYING_DIRECTION": {
+          "description": "The satellite flight direction when observation is done: 'AS' - ascending\ndirection, 'DE' - descending direction\n",
+          "type": "STRING"
+        },
+        "GAIN_COEFFICIENT_B01": {
+          "description": "Coefficient used for radiance conversion",
+          "type": "DOUBLE"
+        },
+        "GAIN_COEFFICIENT_B02": {
+          "description": "Coefficient used for radiance conversion",
+          "type": "DOUBLE"
+        },
+        "GAIN_COEFFICIENT_B03": {
+          "description": "Coefficient used for radiance conversion",
+          "type": "DOUBLE"
+        },
+        "GAIN_COEFFICIENT_B04": {
+          "description": "Coefficient used for radiance conversion",
+          "type": "DOUBLE"
+        },
+        "GAIN_COEFFICIENT_B05": {
+          "description": "Coefficient used for radiance conversion",
+          "type": "DOUBLE"
+        },
+        "GAIN_COEFFICIENT_B06": {
+          "description": "Coefficient used for radiance conversion",
+          "type": "DOUBLE"
+        },
+        "GAIN_COEFFICIENT_B07": {
+          "description": "Coefficient used for radiance conversion",
+          "type": "DOUBLE"
+        },
+        "GAIN_COEFFICIENT_B08": {
+          "description": "Coefficient used for radiance conversion",
+          "type": "DOUBLE"
+        },
+        "GAIN_COEFFICIENT_B09": {
+          "description": "Coefficient used for radiance conversion",
+          "type": "DOUBLE"
+        },
+        "GAIN_COEFFICIENT_B10": {
+          "description": "Coefficient used for radiance conversion",
+          "type": "DOUBLE"
+        },
+        "GAIN_COEFFICIENT_B11": {
+          "description": "Coefficient used for radiance conversion",
+          "type": "DOUBLE"
+        },
+        "GAIN_COEFFICIENT_B12": {
+          "description": "Coefficient used for radiance conversion",
+          "type": "DOUBLE"
+        },
+        "GAIN_COEFFICIENT_B13": {
+          "description": "Coefficient used for radiance conversion",
+          "type": "DOUBLE"
+        },
+        "GAIN_COEFFICIENT_B14": {
+          "description": "Coefficient used for radiance conversion",
+          "type": "DOUBLE"
+        },
+        "GAIN_SETTING_B01": {
+          "description": "Band gain setting: 'HGH' - high, 'NOR' - normal, 'LOW' - low, 'LO1'\n- low 1, or 'LO2' - low 2\n",
+          "type": "STRING"
+        },
+        "GAIN_SETTING_B02": {
+          "description": "Band gain setting: 'HGH' - high, 'NOR' - normal, 'LOW' - low, 'LO1'\n- low 1, or 'LO2' - low 2\n",
+          "type": "STRING"
+        },
+        "GAIN_SETTING_B03": {
+          "description": "Band gain setting: 'HGH' - high, 'NOR' - normal, 'LOW' - low, 'LO1'\n- low 1, or 'LO2' - low 2\n",
+          "type": "STRING"
+        },
+        "GAIN_SETTING_B04": {
+          "description": "Band gain setting: 'HGH' - high, 'NOR' - normal, 'LOW' - low, 'LO1'\n- low 1, or 'LO2' - low 2\n",
+          "type": "STRING"
+        },
+        "GAIN_SETTING_B05": {
+          "description": "Band gain setting: 'HGH' - high, 'NOR' - normal, 'LOW' - low, 'LO1'\n- low 1, or 'LO2' - low 2\n",
+          "type": "STRING"
+        },
+        "GAIN_SETTING_B06": {
+          "description": "Band gain setting: 'HGH' - high, 'NOR' - normal, 'LOW' - low, 'LO1'\n- low 1, or 'LO2' - low 2\n",
+          "type": "STRING"
+        },
+        "GAIN_SETTING_B07": {
+          "description": "Band gain setting: 'HGH' - high, 'NOR' - normal, 'LOW' - low, 'LO1'\n- low 1, or 'LO2' - low 2\n",
+          "type": "STRING"
+        },
+        "GAIN_SETTING_B08": {
+          "description": "Band gain setting: 'HGH' - high, 'NOR' - normal, 'LOW' - low, 'LO1'\n- low 1, or 'LO2' - low 2\n",
+          "type": "STRING"
+        },
+        "GAIN_SETTING_B09": {
+          "description": "Band gain setting: 'HGH' - high, 'NOR' - normal, 'LOW' - low, 'LO1'\n- low 1, or 'LO2' - low 2\n",
+          "type": "STRING"
+        },
+        "GAIN_SETTING_B10": {
+          "description": "Band gain setting: 'HGH' - high, 'NOR' - normal, 'LOW' - low, 'LO1'\n- low 1, or 'LO2' - low 2\n",
+          "type": "STRING"
+        },
+        "GAIN_SETTING_B11": {
+          "description": "Band gain setting: 'HGH' - high, 'NOR' - normal, 'LOW' - low, 'LO1'\n- low 1, or 'LO2' - low 2\n",
+          "type": "STRING"
+        },
+        "GAIN_SETTING_B12": {
+          "description": "Band gain setting: 'HGH' - high, 'NOR' - normal, 'LOW' - low, 'LO1'\n- low 1, or 'LO2' - low 2\n",
+          "type": "STRING"
+        },
+        "GAIN_SETTING_B13": {
+          "description": "Band gain setting: 'HGH' - high, 'NOR' - normal, 'LOW' - low, 'LO1'\n- low 1, or 'LO2' - low 2\n",
+          "type": "STRING"
+        },
+        "GAIN_SETTING_B14": {
+          "description": "Band gain setting: 'HGH' - high, 'NOR' - normal, 'LOW' - low, 'LO1'\n- low 1, or 'LO2' - low 2\n",
+          "type": "STRING"
+        },
+        "GCP_CHIPS_CORRELATED": {
+          "description": "How many chips correlated during correlation statistics creation",
+          "type": "DOUBLE"
+        },
+        "GEOMETRIC_DB_DATE": {
+          "description": "Geometric correction data issuance date",
+          "type": "STRING"
+        },
+        "GEOMETRIC_DB_VERSION": {
+          "description": "Geometric correction data version number",
+          "type": "STRING"
+        },
+        "GRANULE_REPROCESSING": {
+          "description": "What reprocessing has been performed on the granule: 'not reprocessed',\n'reprocessed once', 'reprocessed twice', or 'reprocessing n times'\n",
+          "type": "STRING"
+        },
+        "ORBIT_NUMBER": {
+          "description": "The orbit number of the satellite when data is acquired",
+          "type": "DOUBLE"
+        },
+        "ORIGINAL_BANDS_PRESENT": {
+          "description": "List of bands that are present in each scene",
+          "type": "DOUBLE"
+        },
+        "PGE_VERSION": {
+          "description": "The version of PGE",
+          "type": "STRING"
+        },
+        "PRODUCTION_TIME": {
+          "description": "Generation time of this product",
+          "type": "DOUBLE"
+        },
+        "QA_PERCENT_INTERPOLATED_DATA": {
+          "description": "The percentage of interpolated data in the scene",
+          "type": "DOUBLE"
+        },
+        "QA_PERCENT_MISSING_DATA": {
+          "description": "The percentage of missing data in the scene",
+          "type": "DOUBLE"
+        },
+        "QA_PERCENT_OUT_OF_BOUNDS_DATA": {
+          "description": "The percentage of out of bounds data in the scene",
+          "type": "DOUBLE"
+        },
+        "RADIOMETRIC_DB_DATE": {
+          "description": "Radiometric correction data issuance date",
+          "type": "STRING"
+        },
+        "RADIOMETRIC_DB_VERSION": {
+          "description": "Radiometric correction data version number",
+          "type": "STRING"
+        },
+        "RESAMPLING_METHOD_B01": {
+          "description": "Resampling method: 'BL', 'NN', or 'CC'\n",
+          "type": "STRING"
+        },
+        "RESAMPLING_METHOD_B02": {
+          "description": "Resampling method: 'BL', 'NN', or 'CC'\n",
+          "type": "STRING"
+        },
+        "RESAMPLING_METHOD_B03": {
+          "description": "Resampling method: 'BL', 'NN', or 'CC'\n",
+          "type": "STRING"
+        },
+        "RESAMPLING_METHOD_B04": {
+          "description": "Resampling method: 'BL', 'NN', or 'CC'\n",
+          "type": "STRING"
+        },
+        "RESAMPLING_METHOD_B05": {
+          "description": "Resampling method: 'BL', 'NN', or 'CC'\n",
+          "type": "STRING"
+        },
+        "RESAMPLING_METHOD_B06": {
+          "description": "Resampling method: 'BL', 'NN', or 'CC'\n",
+          "type": "STRING"
+        },
+        "RESAMPLING_METHOD_B07": {
+          "description": "Resampling method: 'BL', 'NN', or 'CC'\n",
+          "type": "STRING"
+        },
+        "RESAMPLING_METHOD_B08": {
+          "description": "Resampling method: 'BL', 'NN', or 'CC'\n",
+          "type": "STRING"
+        },
+        "RESAMPLING_METHOD_B09": {
+          "description": "Resampling method: 'BL', 'NN', or 'CC'\n",
+          "type": "STRING"
+        },
+        "RESAMPLING_METHOD_B10": {
+          "description": "Resampling method: 'BL', 'NN', or 'CC'\n",
+          "type": "STRING"
+        },
+        "RESAMPLING_METHOD_B11": {
+          "description": "Resampling method: 'BL', 'NN', or 'CC'\n",
+          "type": "STRING"
+        },
+        "RESAMPLING_METHOD_B12": {
+          "description": "Resampling method: 'BL', 'NN', or 'CC'\n",
+          "type": "STRING"
+        },
+        "RESAMPLING_METHOD_B13": {
+          "description": "Resampling method: 'BL', 'NN', or 'CC'\n",
+          "type": "STRING"
+        },
+        "RESAMPLING_METHOD_B14": {
+          "description": "Resampling method: 'BL', 'NN', or 'CC'\n",
+          "type": "STRING"
+        },
+        "SATELLITE_RECURRENT_CYCLENUMBER": {
+          "description": "The satellite recurrent cycle number",
+          "type": "DOUBLE"
+        },
+        "SATELLITE_REVOLUTION_NUMBER": {
+          "description": "The satellite revolution number in the cycle",
+          "type": "DOUBLE"
+        },
+        "SCENE_PATH": {
+          "description": "Scene path",
+          "type": "DOUBLE"
+        },
+        "SCENE_ROW": {
+          "description": "Scene row",
+          "type": "DOUBLE"
+        },
+        "SCENE_VIEW": {
+          "description": "Scene view",
+          "type": "DOUBLE"
+        },
+        "SOLAR_AZIMUTH": {
+          "description": "Sun direction as seen from the scene center; azimuth angle in degrees measured eastward from North (0.0<az<360)",
+          "type": "DOUBLE"
+        },
+        "SOLAR_ELEVATION": {
+          "description": "Sun direction as seen from the scene center; elevation angle in degrees (-90.0<el<90.0)",
+          "type": "DOUBLE"
+        },
+        "SOURCE_DATA_GRANULE": {
+          "description": "ID of input AST_L1A data granule used for generating this product",
+          "type": "STRING"
+        },
+        "SWIR_POINTING_ANGLE": {
+          "description": "Pointing angle in degrees",
+          "type": "DOUBLE"
+        },
+        "TIR_POINTING_ANGLE": {
+          "description": "Pointing angle in degrees",
+          "type": "DOUBLE"
+        },
+        "VNIR_POINTING_ANGLE": {
+          "description": "Pointing angle in degrees",
+          "type": "DOUBLE"
+        }
+      }
+    ],
+    "eo:platform": [
+      "Terra"
+    ],
+    "eo:instrument": [
+      "ASTER"
+    ],
+    "eo:bands": [
+      {
+        "name": "B01",
+        "description": "VNIR_Band1 (visible green/yellow)",
+        "center_wavelength": 0.56,
+        "gsd": 15,
+        "gee:wavelength": "0.520-0.600\u00b5m",
+        "common_name": "green"
+      },
+      {
+        "name": "B02",
+        "description": "VNIR_Band2 (visible red)",
+        "center_wavelength": 0.66,
+        "gsd": 15,
+        "gee:wavelength": "0.630-0.690\u00b5m",
+        "common_name": "red"
+      },
+      {
+        "name": "B3N",
+        "description": "VNIR_Band3N (near infrared, nadir pointing)",
+        "center_wavelength": 0.82,
+        "gsd": 15,
+        "gee:wavelength": "0.780-0.860\u00b5m",
+        "common_name": "nir"
+      },
+      {
+        "name": "B04",
+        "description": "SWIR_Band4 (short-wave infrared)",
+        "center_wavelength": 1.65,
+        "gsd": 30,
+        "gee:wavelength": "1.600-1.700\u00b5m",
+        "common_name": "swir16"
+      },
+      {
+        "name": "B05",
+        "description": "SWIR_Band5 (short-wave infrared)",
+        "center_wavelength": 2.165,
+        "gsd": 30,
+        "gee:wavelength": "2.145-2.185\u00b5m",
+        "common_name": "swir22"
+      },
+      {
+        "name": "B06",
+        "description": "SWIR_Band6 (short-wave infrared)",
+        "center_wavelength": 2.205,
+        "gsd": 30,
+        "gee:wavelength": "2.185-2.225\u00b5m",
+        "common_name": "swir22"
+      },
+      {
+        "name": "B07",
+        "description": "SWIR_Band7 (short-wave infrared)",
+        "center_wavelength": 2.26,
+        "gsd": 30,
+        "gee:wavelength": "2.235-2.285\u00b5m",
+        "common_name": "swir22"
+      },
+      {
+        "name": "B08",
+        "description": "SWIR_Band8 (short-wave infrared)",
+        "center_wavelength": 2.33,
+        "gsd": 30,
+        "gee:wavelength": "2.295-2.365\u00b5m"
+      },
+      {
+        "name": "B09",
+        "description": "SWIR_Band9 (short-wave infrared)",
+        "center_wavelength": 2.395,
+        "gsd": 30,
+        "gee:wavelength": "2.360-2.430\u00b5m"
+      },
+      {
+        "name": "B10",
+        "description": "TIR_Band10 (thermal infrared)",
+        "center_wavelength": 8.3,
+        "gsd": 90,
+        "gee:wavelength": "8.125-8.475\u00b5m"
+      },
+      {
+        "name": "B11",
+        "description": "TIR_Band11 (thermal infrared)",
+        "center_wavelength": 8.65,
+        "gsd": 90,
+        "gee:wavelength": "8.475-8.825\u00b5m"
+      },
+      {
+        "name": "B12",
+        "description": "TIR_Band12 (thermal infrared)",
+        "center_wavelength": 9.11,
+        "gsd": 90,
+        "gee:wavelength": "8.925-9.275\u00b5m"
+      },
+      {
+        "name": "B13",
+        "description": "TIR_Band13 (thermal infrared)",
+        "center_wavelength": 10.6,
+        "gsd": 90,
+        "gee:wavelength": "10.250-10.950\u00b5m",
+        "common_name": "lwir11"
+      },
+      {
+        "name": "B14",
+        "description": "TIR_Band14 (thermal infrared)",
+        "center_wavelength": 11.3,
+        "gsd": 90,
+        "gee:wavelength": "10.950-11.650\u00b5m",
+        "common_name": "lwir11"
+      }
+    ],
+    "gee:terms_of_use": [
+      "ASTER data and products distributed by the LP DAAC, with the exception of\nthe ASTER Global Digital Elevation Model (GDEM) dataset (ASTGTM) version 2\n(v2), have no restrictions on data use, sale, or subsequent redistribution.\n"
+    ]
+  },
+  "cube:dimensions": {
+    "x": {
+      "type": "spatial",
+      "axis": "x",
+      "extent": [
+        -180,
+        180
+      ]
+    },
+    "y": {
+      "type": "spatial",
+      "axis": "y",
+      "extent": [
+        -90,
+        90
+      ]
+    },
+    "t": {
+      "type": "temporal",
+      "extent": [
+        "2000-03-04T00:00:00Z",
+        null
+      ]
+    },
+    "bands": {
+      "type": "bands",
+      "values": [
+        "B01",
+        "B02",
+        "B3N",
+        "B04",
+        "B05",
+        "B06",
+        "B07",
+        "B08",
+        "B09",
+        "B10",
+        "B11",
+        "B12",
+        "B13",
+        "B14"
+      ]
+    }
+  },
+  "assets": {
+    "preview_3": {
+      "href": "https://mw1.google.com/ges/dd/images/ASTER_sample.png",
+      "roles": [
+        "thumbnail"
+      ]
+    }
+  }
+}
